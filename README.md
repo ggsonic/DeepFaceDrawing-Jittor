@@ -9,6 +9,14 @@ HomePage: <a href="http://www.geometrylearning.com/DeepFaceDrawing/" target="_bl
 ## Abstract
 Recent deep image-to-image translation techniques allow fast generation of face images from freehand sketches. However, existing solutions tend to overfit to sketches, thus requiring professional sketches or even edge maps as input. To address this issue, our key idea is to implicitly model the shape space of plausible face images and synthesize a face image in this space to approximate an input sketch. We take a local-to-global approach. We first learn feature embeddings of key face components, and push corresponding parts of input sketches towards underlying component manifolds defined by the feature vectors of face component samples. We also propose another deep neural network to learn the mapping from the embedded component features to realistic images with multi-channel feature maps as intermediate results to improve the information flow. Our method essentially uses input sketches as soft constraints and is thus able to produce high-quality face images even from rough and/or incomplete sketches. Our tool is easy to use even for non-artists, while still supporting fine-grained control of shape details. Both qualitative and quantitative evaluations show the superior generation ability of our system to existing and alternative solutions. The usability and expressiveness of our system are confirmed by a user study.
 
+
+### fix install
+```
+apt install --reinstall libxcb-xinerama0
+export QTDIR=~/python3.7/lib/python3.7/site-packages/PyQt5/Qt
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${QTDIR}/lib
+```
+
 ## Prerequisites
 
 1. System
